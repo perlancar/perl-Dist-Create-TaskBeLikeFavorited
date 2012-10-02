@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+use 5.010;
+use strict;
+use warnings;
+
+use Perinci::CmdLine;
+
+# VERSION
+
+Perinci::CmdLine->new(url => '/Dist/Create/TaskBeLikeFavorited/create_task_belike_favorited_dist')->
+    run;
+
+1;
+# ABSTRACT: Create your own Task::BeLike::$AUTHOR::Favorited
+# PODNAME: create-task-belike-favorited-dist
+
+=head1 SYNOPSIS
+
+ # Create distribution in Task-BeLike-SHARYANTO-Favorited/
+ % create-task-belike-favorited-dist sharyanto
+
+ # Build/release your distribution
+ % dzil build
+ % dzil release
+
+ # Show available options
+ % create-task-belike-favorited-dist --help
+
+=cut

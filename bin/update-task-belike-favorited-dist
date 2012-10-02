@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use 5.010;
+use strict;
+use warnings;
+
+use Perinci::CmdLine;
+
+# VERSION
+
+Perinci::CmdLine->new(url => '/Dist/Create/TaskBeLikeFavorited/update_task_belike_favorited_dist')->
+    run;
+
+1;
+# ABSTRACT: Update your Task::BeLike::$AUTHOR::Favorited distribution
+# PODNAME: update-task-belike-favorited-dist
+
+=head1 SYNOPSIS
+
+ % cd Task-BeLike-SHARYANTO-Favorited
+ % update-task-belike-favorited-dist
+ % dzil release
+
+=cut
