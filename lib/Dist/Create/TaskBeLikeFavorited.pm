@@ -122,6 +122,7 @@ _
     mkdir "lib/Task/BeLike";
     mkdir "lib/Task/BeLike/$cpanid";
     my $comment = "#"; # to prevent podweaver from being fooled
+    my $pod = "="; # ditto
     write_file("lib/Task/BeLike/$cpanid/Favorited.pm", <<_);
 package Task::BeLike::$cpanid\::Favorited;
 
@@ -130,13 +131,13 @@ package Task::BeLike::$cpanid\::Favorited;
 1;
 $comment ABSTRACT: Install all $cpanid\'s favorite modules
 
-=head1 DESCRIPTION
+${pod}head1 DESCRIPTION
 
 This task will install modules favorited by $cpanid on L<http://metacpan.org>.
 
-=pkgroup Included modules
+${pod}pkgroup Included modules
 
-=cut
+${pod}cut
 _
     update_task_belike_favorited_dist();
 }
