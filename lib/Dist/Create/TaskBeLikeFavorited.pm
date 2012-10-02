@@ -121,13 +121,14 @@ _
     mkdir "lib/Task";
     mkdir "lib/Task/BeLike";
     mkdir "lib/Task/BeLike/$cpanid";
+    my $comment = "#"; # to prevent podweaver from being fooled
     write_file("lib/Task/BeLike/$cpanid/Favorited.pm", <<_);
 package Task::BeLike::$cpanid\::Favorited;
 
 # VERSION
 
 1;
-# ABSTRACT: Install all $cpanid\'s favorite modules
+$comment ABSTRACT: Install all $cpanid\'s favorite modules
 
 =head1 DESCRIPTION
 
