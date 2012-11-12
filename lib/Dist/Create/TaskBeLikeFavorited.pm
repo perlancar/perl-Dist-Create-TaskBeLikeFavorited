@@ -230,4 +230,21 @@ on a fresh system and conveniently have all your favorite modules installed.
 Of course, you'll have to build and upload your task distribution to CPAN first
 (see Synopsis).
 
+=head2 But you can simply do something simpler like this instead ...
+
+ % cpan_favorites() {
+   perl -Mojo -E "g('https://metacpan.org/author/$1')->dom('td.release a')->pluck('text')->each(sub{s/-/::/g;say})"
+   }
+ % cpan_favorites SHARYANTO | cpanm -n
+
+True. Creating a task distribution on CPAN is definitely more work. However,
+creating a task distribution has several pro's: 1) it works offline if you
+mirror CPAN; 2) it lets you track your favorites over time by comparing past
+versions of the task.
+
+
+=head1 SEE ALSO
+
+http://blogs.perl.org/users/dpetrov/2012/11/install-all-metacpan-favorited-distributions.html
+
 =cut
