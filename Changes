@@ -1,5 +1,12 @@
 Revision history for Dist-Create-TaskBeLikeFavorited
 
+0.04    2014-05-17 (SHARYANTO)
+
+        - No functional changes.
+
+        - Replace File::Slurp with File::Slurp::Tiny.
+
+
 0.03    2012-10-02 (SHARYANTO)
 
         - No functional changes. Another workaround for PodWeaver.

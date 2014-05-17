@@ -3,6 +3,7 @@ package Dist::Create::TaskBeLikeFavorited;
 use 5.010001;
 use strict;
 use warnings;
+use experimental 'smartmatch';
 use Log::Any '$log';
 
 use File::chdir;
@@ -123,8 +124,9 @@ _
     mkdir "lib/Task/BeLike/$cpanid";
     my $comment = "#"; # to prevent podweaver from being fooled
     my $pod = "="; # ditto
-    write_file("lib/Task/BeLike/$cpanid/Favorited.pm", <<_);
-package Task::BeLike::$cpanid\::Favorited;
+    # split package + PKG to work around false positive of DZP::Rinci::Validate
+    write_file("lib/Task/BeLike/$cpanid/Favorited.pm", "package " . <<_);
+Task::BeLike::$cpanid\::Favorited;
 
 # VERSION
 
