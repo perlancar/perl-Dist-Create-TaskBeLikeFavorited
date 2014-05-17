@@ -6,7 +6,7 @@ use warnings;
 use Log::Any '$log';
 
 use File::chdir;
-use File::Slurp;
+use File::Slurp::Tiny qw(read_file write_file);
 use LWP::Simple;
 use Mojo::DOM;
 use POSIX qw(strftime);
