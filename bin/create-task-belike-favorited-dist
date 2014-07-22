@@ -4,11 +4,11 @@ use 5.010;
 use strict;
 use warnings;
 
-use Perinci::CmdLine;
+use Perinci::CmdLine::Any;
 
 # VERSION
 
-Perinci::CmdLine->new(url => '/Dist/Create/TaskBeLikeFavorited/create_task_belike_favorited_dist')->
+Perinci::CmdLine::Any->new(url => '/Dist/Create/TaskBeLikeFavorited/create_task_belike_favorited_dist')->
     run;
 
 1;
